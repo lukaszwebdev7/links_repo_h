@@ -68,7 +68,7 @@ UserSchema.methods.sendMail = async function() {
 		from: 'lucas.nodemailer@gmail.com',
 		to: `${this.email}`,
 		subject: 'Potwierdzenie adresu e-mail ze strony links_repository.',
-		html: `Kliknij "Potwierdź" celu dokończenia rejestracji. <a href="http://localhost:3000/verify/${this
+		html: `Kliknij "Potwierdź" celu dokończenia rejestracji. <a href="https://links-repo.herokuapp.com/verify/${this
 			.verificationToken}">Potwierdź</a>`
 	};
 
@@ -90,7 +90,7 @@ UserSchema.methods.sendPasswordReset = async function({ email, uniqueString }) {
 		from: 'lucas.nodemailer@gmail.com',
 		to: `${email}`,
 		subject: 'Zmiana hasła ze strony links_repository.',
-		html: `Otrzymaliśmy prośbę o zmianę hasła. Kliknij "Przejdź" w celu dokonania jego zmiany. <a href="http://localhost:3000/reset.html?email=${email}&uniqueString=${uniqueString}">Przejdź</a> <p>Jeśli to nie ty wysłałeś/aś prośbę o zmianę hasła, zignoruj tę wiadomość.</p>`
+		html: `Otrzymaliśmy prośbę o zmianę hasła. Kliknij "Przejdź" w celu dokonania jego zmiany. <a href="https://links-repo.herokuapp.com/reset.html?email=${email}&uniqueString=${uniqueString}">Przejdź</a> <p>Jeśli to nie ty wysłałeś/aś prośbę o zmianę hasła, zignoruj tę wiadomość.</p>`
 	};
 
 	await new Promise((resolve, reject) => {
