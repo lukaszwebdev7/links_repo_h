@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <link rel="stylesheet" href="./build/styles.css">
+    </head>
+    <body class="bg-gray-100">
+        <main class="mt-10">
+            <div class="container mx-auto w-11/12 sm:w-2/3 lg:max-w-sm xl:max-w-md shadow-md hover:shadow-lg transition duration-300 mb-4">
+                <form id="form" class="py-6 p-10 bg-white rounded-xl">
+                    <h5 class="text-2xl mb-8 font-bold">Rejestracja</h5>
+                    <div class="mb-6">
+                        <label for="username" class="mr-4 text-gray-700 font-bold inline-block mb-2">imię</label>
+                        <input type="text" id="username-input" class="border bg-gray-100 py-2 px-4 w-full outline-none focus:ring-2 focus:ring-indigo-400 rounded" placeholder="wpisz imię ..."/>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="mr-4 text-gray-700 font-bold inline-block mb-2">e-mail</label>
+                        <input type="email" id="email-input" class="border bg-gray-100 py-2 px-4 w-full outline-none focus:ring-2 focus:ring-indigo-400 rounded" placeholder="wpisz adres e-mail ..."/>
+                    </div>
+                    <div class="">
+                        <label for="password" class="mr-4 text-gray-700 font-bold inline-block mb-2">hasło</label>
+                        <input type="password" id="password-input" class="border bg-gray-100 py-2 px-4 w-full outline-none focus:ring-2 focus:ring-indigo-400 rounded" placeholder="wpisz hasło ..."/>
+                    </div>
+                    
+                    <div id="form-alert" class="text-green-600 text-center"></div>
+                    <button type="submit" class="w-full mt-6 text-indigo-50 font-bold bg-yellow-400 py-3 rounded-md hover:bg-yellow-600 transition duration-300">Wyślij</button>
+                </form>
+            </div>
+            
+        </main>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+        <script src="./registration-app.js"></script>
+    </body>
+</html>

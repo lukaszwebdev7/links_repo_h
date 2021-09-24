@@ -1,0 +1,37 @@
+{
+	"name": "links_repository",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "node index.js",
+		"build": "postcss css/styles.css -o public/build/styles.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"autoprefixer": "^10.3.4",
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-async-errors": "^3.1.1",
+		"express-rate-limit": "^5.3.0",
+		"googleapis": "^85.0.0",
+		"helmet": "^4.6.0",
+		"http-status-codes": "^2.1.4",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.0.4",
+		"nodemailer": "^6.6.3",
+		"postcss-cli": "^8.3.1",
+		"tailwindcss": "^2.2.15",
+		"xss-clean": "^0.1.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12"
+	},
+	"engines": {
+		"node": "16.x"
+	}
+}

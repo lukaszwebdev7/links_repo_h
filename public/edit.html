@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./build/styles.css">
+    </head>
+    <body class="bg-gray-100">
+        <header class="flex items-center justify-between flex-wrap bg-indigo-600 p-6">
+            <button id="back"class="flex items-center h-10 text-indigo-50 font-bold bg-yellow-400 py-3 px-6 rounded-md hover:bg-yellow-500 transition duration-300"><span class="inline-block">Powrót do listy</span></button>
+            
+        </header>
+        <section class="lg:mt-8 2xl:mt-12 w-11/12 sm:w-3/4 lg:w-2/3 2xl:w-3/4">
+            <p class="text-lg mb-4 font-bold ml-2 2xl:ml-20">Edytujesz dane strony:</p>
+            <div class="container ml-2 2xl:ml-20 mt-4 2xl:mt-8 bg-blue-200 shadow-md hover:shadow-lg transition duration-300 mb-4 rounded">
+                <div id="link" class="px-4 py-2"></div>
+            </div>
+            
+        </section>
+        
+        <section class="flex justify-center">
+            <div class="container mt-8 w-11/12 sm:w-2/3 lg:max-w-xl shadow-md hover:shadow-lg transition duration-300 mb-4">
+                <form id="form" class="py-4 p-10 bg-white rounded-xl">
+                    <p class="text-2xl mb-4 2xl:mb-8 font-bold">Zmień jedną lub kilka pozycji:</p>
+                    <div class="">
+                        <label for="page-name" class="mr-4 text-gray-700 font-bold inline-block mb-2">nazwa adresu strony</label>
+                        <input type="text" id="name-input" class="border bg-gray-100 py-2 px-4 w-full h-8 outline-none focus:ring-2 focus:ring-indigo-400 rounded"/>
+                    </div>
+                    <div class="">
+                        <label for="address" class="mr-4 text-gray-700 font-bold inline-block mb-2">adres strony</label>
+                        <input type="text" id="address-input" class="border bg-gray-100 py-2 px-4 w-full h-8 outline-none focus:ring-2 focus:ring-indigo-400 rounded"/>
+                    </div>
+                    <div class="">
+                        <span class="mr-4 text-gray-700 font-bold inline-block mb-2">rodzaj strony </span>
+                        <select id="area-input" class="block appearance-none w-full bg-gray-100 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                            <option value="">wybierz opcję</option>
+                            <option value="nauka">nauka</option>
+                            <option value="praca">praca</option>
+                            <option value="rozrywka">rozrywka</option>
+                            <option value="zakupy">zakupy</option>
+                        </select>
+                    </div> 
+                    <div id="form-alert" class="text-green-600 text-center"></div>
+                    <div class="flex justify-center">
+                        <button type="submit" class="flex items-center justify-center w-1/2 h-10 mt-6 text-indigo-50 font-bold bg-yellow-400 py-3 rounded-md hover:bg-yellow-500 transition duration-300"><span class="inline-block">prześlij zmiany</span></button>
+                    </div>
+                    
+                </form> 
+            </div>
+        </section>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" 
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./edit-app.js"></script>
+    </body>
+</html>
