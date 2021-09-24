@@ -163,7 +163,7 @@ const changePage = async (e) => {
 	const urlSearchParams = new URLSearchParams(window.location.search);
 	const params = Object.fromEntries(urlSearchParams.entries());
 	const { area } = params;
-	window.location.replace(`http://localhost:3000/user.html?page=${page}&area=${area}`);
+	window.location.replace(`https://links-repo.herokuapp.com//user.html?page=${page}&area=${area}`);
 	showLinks();
 };
 
@@ -171,7 +171,7 @@ const chooseArea = (e) => {
 	btnsDOM.innerHTML = '';
 	const el = e.target;
 	const area = el.dataset.category;
-	window.location.replace(`http://localhost:3000/user.html?page=1&area=${area}`);
+	window.location.replace(`https://links-repo.herokuapp.com//user.html?page=1&area=${area}`);
 	showLinks();
 };
 
