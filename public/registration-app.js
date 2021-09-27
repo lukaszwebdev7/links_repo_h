@@ -34,8 +34,12 @@ formDOM.addEventListener('submit', async (e) => {
 		usernameInputDOM.value = '';
 		passwordInputDOM.value = '';
 		emailInputDOM.value = '';
-
-		window.location.assign('index.html');
+		formAlertDOM.textContent =
+			'Na Twoją pocztę został przesłany link aktywacyjny. Za chwilę powrócisz do poprzedniej strony.';
+		setTimeout(() => {
+			formAlertDOM.style.display = 'none';
+			window.location.assign('index.html');
+		}, 3000);
 	} catch (error) {
 		formAlertDOM.textContent = error.response.data.msg || error.response.data;
 	}

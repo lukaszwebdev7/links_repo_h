@@ -68,10 +68,11 @@ UserSchema.methods.sendMail = async function() {
 		from: 'lucas.nodemailer@gmail.com',
 		to: `${this.email}`,
 		subject: 'Potwierdzenie adresu e-mail ze strony https://links-repo.herokuapp.com/.',
-		html: `W celu dokończenia rejestracji w aplikacji links-repo dostępnej na stronie https://links-repo.herokuapp.com/ kliknij "Potwierdź". <a href="https://links-repo.herokuapp.com/verify/${this
-			.verificationToken}">Potwierdź</a>
-			
-		Jeśli to nie Ty dokonałeś rejestracji na stronie https://links-repo.herokuapp.com/, zignoruj tę wiadomość.`
+		html: `<p>Wiadomość ze strony https://links-repo.herokuapp.com/</p>
+		<p>W celu dokończenia rejestracji w aplikacji links-repo kliknij: <a href="https://links-repo.herokuapp.com/verify/${this
+			.verificationToken}">potwierdź.</a></p>
+
+		<p>Jeśli to nie Ty dokonałeś rejestracji na stronie https://links-repo.herokuapp.com/, zignoruj tę wiadomość.</p>`
 	};
 
 	await new Promise((resolve, reject) => {
